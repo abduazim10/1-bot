@@ -38,7 +38,8 @@ cursor.execute(sql_query)
 
 logging.basicConfig(level=logging.INFO)
 
-bot = Bot(token=API_TOKEN)
+bot = Bot(token=API_TOKEN, proxy='http://proxy.server:3128')
+
 dp = Dispatcher(bot=bot, storage=MemoryStorage())
 
 class Register(StatesGroup):
